@@ -5,7 +5,7 @@ module.exports = async function(deployer) {
     await deployer.deploy(CattoToken);
     const catto = await CattoToken.deployed()
 
-    await deployer.deploy(EthSwap);
+    await deployer.deploy(EthSwap, catto.address);
     const ethswap = await EthSwap.deployed()
 
     // Transfer all Catto tokens to EthSwap
