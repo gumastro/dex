@@ -6,7 +6,7 @@ contract EthSwap {
     string public name = "EthSwap Instant Exchange";
     CattoToken public cattoToken;
     uint public rate = 100;
-    bool public flag;
+    bool public flag; // Avoid reentrancy attack
 
     event CattoPurchased (
         address account,
@@ -30,10 +30,12 @@ contract EthSwap {
         // Calculate # of catto to buy
         uint cattoAmount = msg.value * rate;
 
+        // User can't buy more catto than the exchange has
         require(cattoToken.balanceOf(address(this)) >= cattoAmount && !flag);
 
         flag = true;
 
+        // Perform purchase
         cattoToken.transfer(msg.sender, cattoAmount);
 
         // Emit an event
