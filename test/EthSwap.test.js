@@ -69,4 +69,39 @@ contract('EthSwap', ([deployer, investor]) => {
             assert.equal(event.rate.toString(), '100')
         })
     })
+
+    describe('sellCatto()', async() => {
+        let result;
+
+        before(async() => {
+            // Investor must approve cattoTokens before the purchase
+            await cattoToken.approve(ethSwap.address, tokens('100'), { from: investor })
+            // Sell Catto
+            result = await ethSwap.sellCatto(tokens('100'), { from: investor })
+        })
+
+        it('allows user to instantly sell Catto to ethSwap for a fixed price', async() => {
+            // Check investor catto balance after sale
+            let investorBalance = await cattoToken.balanceOf(investor)
+            assert.equal(investorBalance.toString(), tokens('0'))
+
+            // Check ethSwap catto balance after sale
+            let ethSwapBalance = await cattoToken.balanceOf(ethSwap.address)
+            assert.equal(ethSwapBalance.toString(), tokens('1000000'))
+
+            // Check ethSwap ether balance after sale
+            ethSwapBalance = await web3.eth.getBalance(ethSwap.address)
+            assert.equal(ethSwapBalance.toString(), tokens('0'))
+
+            // Check emited event after sale
+            const event = result.logs[0].args
+            assert.equal(event.account, investor)
+            assert.equal(event.token, cattoToken.address)
+            assert.equal(event.amount.toString(), tokens('100').toString())
+            assert.equal(event.rate.toString(), '100')
+
+            // FAILURE: investor can't sell more tokens than they have
+            await ethSwap.sellCatto(tokens('500'), { from: investor }).should.be.rejected;
+        })
+    })
 })
