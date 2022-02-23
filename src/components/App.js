@@ -66,7 +66,7 @@ class App extends Component {
   buyCatto = (etherAmount) => {
     console.log("buycatto called")
     this.setState({ loading: true })
-    this.state.ethSwap.methods.buyCatto().send({ value: etherAmount, from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.ethSwap.methods.buyCatto().send({ value: etherAmount, from: this.state.account }).on('confirmation', (confirmation, receipt) => {
       this.setState({ loading: false })
       window.location.reload(true)
     })
