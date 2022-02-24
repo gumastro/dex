@@ -38,7 +38,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## :computer: About The Project
 
 &nbsp; <img src="imgs/main.png" alt="Decentralized Exchange Catto Screen Shot" width="900"/>
 
@@ -59,7 +59,7 @@ Instant decentralized cryptocurrency exchange powered by the ethereum blockchain
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-## Getting Started
+## :hammer_and_wrench: Getting Started
 
 ### Installation
 
@@ -90,7 +90,7 @@ Instant decentralized cryptocurrency exchange powered by the ethereum blockchain
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## :star2: Usage
 
 ### Buy
 
@@ -119,7 +119,7 @@ Instant decentralized cryptocurrency exchange powered by the ethereum blockchain
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- TODO -->
-## TODO
+## :white_check_mark: TODO
 
 - [ ] Add fee exchange to collect profit
 - [ ] Make exchange rate dynamic
@@ -128,14 +128,14 @@ Instant decentralized cryptocurrency exchange powered by the ethereum blockchain
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
-## License
+## :memo: License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
-## Contact
+## :mailbox: Contact
 
 Gustavo Tuani Mastrobuono - gumastro@usp.br
 
