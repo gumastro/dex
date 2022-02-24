@@ -36,12 +36,11 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-<br/>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<br/>&nbsp; <img src="imgs/main.png" alt="Decentralized Exchange Catto Screen Shot" width="900"/>
+&nbsp; <img src="imgs/main.png" alt="Decentralized Exchange Catto Screen Shot" width="900"/>
 
 Instant decentralized cryptocurrency exchange powered by the ethereum blockchain that allows for ERC20 cryptocurrency transactions to take place at a fixed price
 
@@ -53,6 +52,7 @@ Instant decentralized cryptocurrency exchange powered by the ethereum blockchain
 * [web3.js](https://web3js.readthedocs.io/en/v1.7.0/)
 * [Truffle](https://trufflesuite.com)
 * [Chai.js](https://www.chaijs.com)
+* [Identicon.js](https://github.com/stewartlord/identicon.js/tree/master)
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 
