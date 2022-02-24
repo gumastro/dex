@@ -64,7 +64,6 @@ class App extends Component {
   }
 
   buyCatto = (etherAmount) => {
-    console.log("buycatto called")
     this.setState({ loading: true })
     this.state.ethSwap.methods.buyCatto().send({ value: etherAmount, from: this.state.account }).on('confirmation', (confirmation, receipt) => {
       this.setState({ loading: false })
@@ -72,7 +71,15 @@ class App extends Component {
     })
   }
 
-
+  sellCatto = (cattoAmount) => {
+    this.setState({ loading: true })
+    this.state.cattoToken.methods.approve(this.state.ethSwap.address, cattoAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.state.ethSwap.methods.sellCatto(cattoAmount).send({ from: this.state.account }).on('confirmation', (confirmation, receipt) => {
+        this.setState({ loading: false })
+        window.location.reload(true)
+      })
+    })
+  }
 
   constructor(props) {
     super(props)
@@ -96,6 +103,7 @@ class App extends Component {
         ethBalance={this.state.ethBalance}
         cattoBalance={this.state.cattoBalance}
         buyCatto={this.buyCatto}
+        sellCatto={this.sellCatto}
       />
     }
     return (
