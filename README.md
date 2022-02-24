@@ -19,21 +19,21 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#computer-about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#hammer_and_wrench-getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#star2-usage">Usage</a></li>
+    <li><a href="#white_check_mark-roadmap">Roadmap</a></li>
+    <li><a href="#memo-license">License</a></li>
+    <li><a href="#mailbox-contact">Contact</a></li>
   </ol>
 </details>
 
